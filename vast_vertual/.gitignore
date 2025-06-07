@@ -1,0 +1,39 @@
+# Python bytecode
+*.pyc
+__pycache__/
+
+# Virtual environment folders (common names)
+venv/
+env/
+vast_vertual/
+
+# Django migration files (sometimes you want to track these, but often not)
+**/migrations/
+
+# Database files (if using SQLite)
+db.sqlite3
+
+# Static files collected by collectstatic
+/staticfiles/
+
+# Media files (uploaded by users)
+media/
+
+# IDE/editor configs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Environment variables file
+.env
+
+# Coverage reports
+htmlcov/
+.coverage
+
+# Django secret key file (if separate)
+secret_key.txt

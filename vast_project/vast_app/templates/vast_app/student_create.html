@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enter no of Students</title>
+  </head>
+  <body>
+    <h1>{% if student %} Update student {% else %} Add Student {% endif %}</h1>
+    <form action="{% url 'create' %}" method="POST">
+      {% csrf_token %}
+      <label> Name: </label><br />
+      <input
+        type="text"
+        name="name"
+        value="{{student.name | default:''}}"
+      /><br />
+      <label> Email: </label><br />
+      <input
+        type="email"
+        name="email"
+        value="{{student.email | default:''}}"
+      /><br />
+      <label> Course:</label><br />+
+      <input
+        type="text"
+        name="course"
+        value="{{student.course | default:''}}"
+      /><br />
+      <label> Contact</label><br />
+      <input
+        type="text"
+        name="contact"
+        value="{{student.contact | default:''}}"
+      /><br />
+
+      <button type="submit">save</button>
+    </form>
+  </body>
+</html>
