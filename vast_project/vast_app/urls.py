@@ -7,4 +7,5 @@ urlpatterns = [
     path('student_create/', views.student_create, name="create"),
     path('student_update/<int:pk>/', views.student_update, name="update"), 
     path('student_delete/<int:pk>/', views.student_delete, name="delete"),
+    path('student_delete/<int:pk>/', views.student_delete, name="delete"),
 ]
